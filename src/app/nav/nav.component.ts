@@ -11,11 +11,11 @@ import { MessageService } from '../services/message.service';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  styleUrls: ['./nav.component.css'],
 })
 export class NavComponent {
-
   user_id: any = '';
+  admin: boolean = false;
 
   constructor(
     private webService: WebService,
@@ -26,9 +26,10 @@ export class NavComponent {
     private customvalidationService: CustomvalidationService,
     private activatedRoute: ActivatedRoute,
     private messageService: MessageService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
+    this.admin = this.loginService.admin;
     this.user_id = this.loginService.user_id;
   }
 
@@ -45,9 +46,10 @@ export class NavComponent {
         this.loginService.user_id = '';
         this.router.navigate(['/login']);
       } else {
-        this.notificationService.danger('Something went wrong plese try again...!')
+        this.notificationService.danger(
+          'Something went wrong plese try again...!'
+        );
       }
     });
   }
-
 }

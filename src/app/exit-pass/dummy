@@ -1,0 +1,178 @@
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ExitPassModel } from './model/exit-pass.model';
+import { UrlConstants } from 'src/app/constants/urlConstants';
+import { WebService } from 'src/app/services/webservice.service';
+import { Router, ActivatedRoute } from '@angular/router';
+import { NotificationService } from '../services/notification.service';
+import { LoginService } from '../login/service/login.service';
+import { PreloaderService } from '../services/preloader.service';
+import { CustomvalidationService } from '../services/customvalidation.service';
+import { ExitPassConstants } from './constants/exit-pass.constants';
+import { MessageService } from '../services/message.service';
+
+@Component({
+  selector: 'app-exit-pass',
+  templateUrl: './exit-pass.component.html',
+  styleUrls: ['./exit-pass.component.css']
+})
+export class ExitPassComponent implements OnInit {
+
+  exitPassModel: ExitPassModel = new ExitPassModel();
+  exitPassModelArr = [];
+  exitPassModelArrCopy = [];
+  requestModel: any = {};
+  user_id: any = '';
+
+  constructor(
+    private webService: WebService,
+    private router: Router,
+    private notificationService: NotificationService,
+    private loginService: LoginService,
+    private preloaderService: PreloaderService,
+    private customvalidationService: CustomvalidationService,
+    private activatedRoute: ActivatedRoute,
+    private messageService: MessageService
+  ) { }
+
+  ngOnInit(): void {
+    if (this.loginService.admin) {
+      this.messageService.getMsg(this.messageService.userDetails).subscribe(res =>{
+        this.user_id = res.message.user_id;
+        this.validateSequence();
+      });
+    } else {
+      this.user_id = this.loginService.user_id;
+      this.validateSequence();
+    }
+  }
+
+  validateSequence() {
+    this.requestModel = {};
+    this.requestModel.user_id = this.user_id;
+    this.requestModel.method = 'GET';
+    this.requestModel.data = [];
+    this.webService.postApi(UrlConstants.FASCIA, this.requestModel).subscribe((res: any) => {
+      if (res.STATUS == 'OK') {
+        this.webService.postApi(UrlConstants.POWER_REQUIREMENT_TEMPORARY, this.requestModel).subscribe((res: any) => {
+          if (res.STATUS == 'OK') {
+            this.webService.postApi(UrlConstants.EXHIBITOR_BADGE, this.requestModel).subscribe((res: any) => {
+              if (res.STATUS == 'OK') {
+                this.getData();
+              } else {
+                this.notificationService.danger('Exhibitor Badge not found, please fill & submit \'Exhibitor Badge\' to continue');
+                setTimeout(() => {
+                  this.router.navigate(['../exhibitor-badge'], { relativeTo: this.activatedRoute })
+                }, 3000);
+              }
+            });
+          } else {
+            this.webService.postApi(UrlConstants.POWER_REQUIREMENT_EXHIBITION, this.requestModel).subscribe((res: any) => {
+              if (res.STATUS == 'OK') {
+                this.webService.postApi(UrlConstants.EXHIBITOR_BADGE, this.requestModel).subscribe((res: any) => {
+                  if (res.STATUS == 'OK') {
+                    this.getData();
+                  } else {
+                    this.notificationService.danger('Exhibitor Badge not found, please fill & submit \'Exhibitor Badge\' to continue');
+                    setTimeout(() => {
+                      this.router.navigate(['../exhibitor-badge'], { relativeTo: this.activatedRoute })
+                    }, 3000);
+                  }
+                });
+              } else {
+                this.notificationService.danger('Power Requirement request not found, please fill & submit \'Power Requirement\' to continue');
+                setTimeout(() => {
+                  this.router.navigate(['../power-requirement'], { relativeTo: this.activatedRoute })
+                }, 3000);
+              }
+            });
+          }
+        });
+      } else {
+        this.notificationService.danger('Fascia Name not found, please fill & submit \'Fascia Name\' to continue');
+        setTimeout(() => {
+          this.router.navigate(['../fascia'], { relativeTo: this.activatedRoute })
+        }, 3000);
+      }
+    });
+  }
+
+  getData() {
+    this.preloaderService.show();
+    let ExitPassReqModel: any = {};
+    ExitPassReqModel.user_id = this.user_id;
+    ExitPassReqModel.method = 'GET';
+    ExitPassReqModel.data = [];
+    this.webService.postApi(UrlConstants.EXIT_PASS, ExitPassReqModel).subscribe((res: any) => {
+      this.preloaderService.hide();
+      if (res.STATUS == 'OK') {
+        if (res.data.length > 0) {
+          this.notificationService.success(res.message);
+          this.exitPassModelArrCopy = res.data;
+          this.processData();
+        } else {
+          this.notificationService.danger(res.message);
+          this.processData();
+        }
+      } else {
+        this.notificationService.danger(res.message);
+        this.processData();
+      }
+    });
+  }
+
+  processData() {
+    this.exitPassModelArr = [];
+    for (let i = 0; i < 10; i++) {
+      let exitPassModel = JSON.parse(JSON.stringify(this.exitPassModel));
+      exitPassModel.slNo = i + 1;
+      if (this.exitPassModelArrCopy.length > 0) {
+        if (this.exitPassModelArrCopy[i]) {
+          this.exitPassModelArr[i] = this.exitPassModelArrCopy[i];
+          this.exitPassModelArr[i].slNo = i + 1;
+          exitPassModel.due = 'No Due';
+        } else {
+          this.exitPassModelArr[i] = exitPassModel;
+        }
+      } else {
+        this.exitPassModelArr[i] = exitPassModel;
+      }
+    }
+  }
+
+  onSubmit() {
+    this.notificationService.danger('Development is in progress');
+    this.preloaderService.show();
+    let ExitPassReqModel: any = {};
+    let tempArray = [];
+    this.exitPassModelArr.forEach(element => {
+      if (element.item !== "" && element.noOfPackage > 0 && element.status == '0') {
+        tempArray.push(element);
+      }
+    });
+    if (tempArray.length < 1) {
+      this.notificationService.danger('Please fill the form and submit...!');
+    } else {
+      ExitPassReqModel.user_id = this.loginService.user_id;
+      ExitPassReqModel.method = 'POST';
+      ExitPassReqModel.data = tempArray;
+      this.webService.postApi(UrlConstants.EXIT_PASS, ExitPassReqModel).subscribe((res: any) => {
+        this.preloaderService.hide();
+        if (res.STATUS == 'OK') {
+          this.notificationService.success('Details updated successfully');
+          this.ngOnInit();
+        } else {
+          this.notificationService.danger('Something went wrong, please try again ...!');
+        }
+      });
+    }
+  }
+
+  downloadExitPass() {
+    this.notificationService.danger('Development is in progress');
+  };
+
+}
+
+
+
+

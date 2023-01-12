@@ -6,17 +6,17 @@ header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 header("Content-Type: application/json; charset=UTF-8");
 //Development Env.
 
-    $db_host = 'localhost';
+/*     $db_host = 'localhost';
     $db_name = 'stonatest';
     $db_username = 'root';
-    $db_password = '';
+    $db_password = ''; */
 
 //Production Env.
 
-/* $db_host = 'exhibitor.stonaindia.co.in';
+$db_host = 'http://exhibitor.stonaindia.co.in/';
 $db_name = 'stona_exhibitor';
 $db_username = 'rkritesh000';
-$db_password = 'Rky000_si'; */
+$db_password = 'Rky000_si';
 
 $mysqli = new mysqli($db_host, $db_username, $db_password, $db_name);
 

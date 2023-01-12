@@ -41,11 +41,11 @@
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <a (click)="logout()" class="dropdown-item" style="cursor:pointer"> Logout
         </a>
-        <div class="dropdown-divider"></div>
-        <a [routerLink]="['./create-user']" class="dropdown-item">Create User
+        <div class="dropdown-divider" ></div>
+        <a [routerLink]="['./create-user']" class="dropdown-item" *ngIf="!admin">Create User
         </a>
         <div class="dropdown-divider"></div>
-        <a [routerLink]="['./import-users']" class="dropdown-item">Import Users
+        <a [routerLink]="['./import-users']" class="dropdown-item" *ngIf="!admin">Import Users
         </a>
         <div class="dropdown-divider"></div>
       </div>

@@ -6,24 +6,24 @@ import { MessageService } from '../services/message.service';
 @Component({
   selector: 'app-aside',
   templateUrl: './aside.component.html',
-  styleUrls: ['./aside.component.css']
+  styleUrls: ['./aside.component.css'],
 })
 export class AsideComponent {
-
   constructor(
     private loginService: LoginService,
     private messageService: MessageService
-  ) {
-
-  }
+  ) {}
   exhibitorDetails: any = [];
-  exhibitorName: string = '';;
+  exhibitorName: string = '';
+  admin: boolean = false;
 
   ngOnInit() {
-    this.messageService.getMsg(this.messageService.exhibitorDetails).subscribe(res =>{
-      this.exhibitorDetails = res.message[0];
-      this.exhibitorName = this.exhibitorDetails.exhibitorName;
-    });
+    this.admin = this.loginService.admin;
+    this.messageService
+      .getMsg(this.messageService.exhibitorDetails)
+      .subscribe((res) => {
+        this.exhibitorDetails = res.message[0];
+        this.exhibitorName = this.exhibitorDetails.exhibitorName;
+      });
   }
-
 }
