@@ -1,0 +1,82 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Exit Pass</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Exit Pass</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Exit Pass</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <form id="exitPassForm" class="exitPassForm" #exitPassForm="ngForm">
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10px">#</th>
+                                            <th>Items</th>
+                                            <th>No. of Cases/Packing</th>
+                                            <th>Due</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of exitPassModelArr; let i = index">
+                                            <td>{{item.slNo}}</td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="text" class="form-control"
+                                                        [(ngModel)]="exitPassModelArr[i].item" name="item-{{i}}"
+                                                        #item="ngModel" [disabled]="exitPassModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="number" class="form-control"
+                                                        [(ngModel)]="exitPassModelArr[i].noOfPackage" name="noOfPackage-{{i}}"
+                                                        #noOfPackage="ngModel" min="0" [disabled]="exitPassModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="badge"
+                                                    [ngClass]="{'text-success': exitPassModelArr[i].due == 'No Due' , 'text-danger': exitPassModelArr[i].due == ''}">
+                                                    {{exitPassModelArr[i].due}}
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+                                <button type="button" class="btn btn-primary float-right"
+                                    (click)="downloadExitPass()">Download Exit Pass</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

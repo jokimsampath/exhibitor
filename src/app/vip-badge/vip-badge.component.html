@@ -1,0 +1,98 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>VIP Badge</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">VIP Badge</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section><!--  -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">VIP Badge</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <form id="vipBadgeForm" class="vipBadgeForm" #vipBadgeForm="ngForm">
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10px">#</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Phone</th>
+                                            <th>Company's Name</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of vipBadgeModelArr; let i = index">
+                                            <td>{{item.slNo}}</td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="text" class="form-control"
+                                                        [(ngModel)]="vipBadgeModelArr[i].standPersonName" name="standPersonName-{{i}}"
+                                                        #standPersonName="ngModel" [disabled]="vipBadgeModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="text" class="form-control"
+                                                        [(ngModel)]="vipBadgeModelArr[i].email" name="email-{{i}}"
+                                                        #email="ngModel" [disabled]="vipBadgeModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="text" class="form-control"
+                                                        [(ngModel)]="vipBadgeModelArr[i].phone" name="phone-{{i}}"
+                                                        #phone="ngModel" [disabled]="vipBadgeModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="text" class="form-control"
+                                                        [(ngModel)]="vipBadgeModelArr[i].companyName" name="companyName-{{i}}"
+                                                        #companyName="ngModel" [disabled]="vipBadgeModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="text" class="form-control"
+                                                        [(ngModel)]="vipBadgeModelArr[i].country" name="country-{{i}}"
+                                                        #country="ngModel" [disabled]="vipBadgeModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+                            </div>
+                        </form>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

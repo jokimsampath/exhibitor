@@ -1,0 +1,75 @@
+<div class="hold-transition login-page">
+    <div class="login-box">
+        <div class="card">
+            <div class="card-body login-card-body">
+                <div class="login-logo">
+                    <a href="./" class="brand-link">
+                        <img src="./assets/dist/img/logo-stonemart.png" alt="logo-stonemart" class="brand-image">
+                    </a>
+                </div>
+                <form id="signInForm" class="signInForm" #loginForm="ngForm"
+                    [appMatchPassword]="['password', 'confirmPassword']" (ngSubmit)="loginForm.form.valid && login()"
+                    novalidate>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" class="form-control form-control-sm" [(ngModel)]="loginRequest.email" name="email"
+                            #email="ngModel" required email>
+                        <span class="text-danger"
+                            *ngIf="(email.touched || loginForm.submitted) && email.errors?.required">
+                            Email is required
+                        </span>
+                        <span class="text-danger" *ngIf="email.touched && email.errors?.email">
+                            Enter a valid email address
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control form-control-sm" [(ngModel)]="loginRequest.password" name="password"
+                            #password="ngModel" appPasswordPattern required>
+                        <span class="text-danger"
+                            *ngIf="(password.touched || loginForm.submitted) && password.errors?.required">
+                            Password is required
+                        </span>
+                        <span class="text-danger" *ngIf="password.touched && password.errors?.invalidPassword">
+                            Password should have minimum 6 characters
+                        </span>
+                    </div>
+                    <div class="row">
+                        <div class="col-8 rememberMe">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">
+                                    Remember Me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="icheck-primary form-group">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="admin"
+                                        [(ngModel)]="loginRequest.admin" name="admin" #admin="ngModel">
+                                    <label class="custom-control-label" for="admin">Admin</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-12 signIn">
+                            <button type="submit" class="btn btn-primary btn-block" id="signIn">Sign In</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+                <!-- <div class="row login-footer">
+                    <div class="col-6 left">
+                        <a [routerLink]="['/registration']">Register</a>
+                    </div>
+                    <div class="col-6">
+                        <a [routerLink]="['./']" class="text-center">Forgot Password</a>
+                    </div>
+                </div> -->
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+    </div>
+    <!-- /.login-box -->
+</div>

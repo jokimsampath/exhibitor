@@ -1,0 +1,423 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Freight Handling</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Freight Handling</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title"> Mr. Rajath Naik</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            Sr. DGM - Sales<br />
+                            M/s. R.E. Rogers India Pvt. Ltd.<br />
+                            R.E.R. House, 2383/1, 11th Main,<br />
+                            15th Cross, 'E' Block, <br />
+                            Opp. State Bank of Mysore,<br />
+                            Sahakara Nagar, Bengaluru - 560 092<br />
+                            Ph: +91-80-42690500<br />
+                            Mobile: +91-9901597909<br />
+                            E-mail: rajath@rogersworldwideindia.com<br /><br />
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Mr. Sanjay S. Kulkarni</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            Executive Director<br />
+                            M/s. Orient Marine Lines Pvt. Ltd.<br />
+                            49, Rani Jhansi Road,<br />
+                            New Delhi - 110055<br />
+                            Ph: +91-11-45359999, 23514050, <br />
+                            Fax: +91-11-23625477, 23550455<br />
+                            Mobile: +91-9810057414, 9313257414<br />
+                            E-mail: sanjayk@orientm.com, <br />
+                            sk@orientmarinelines.com<br />
+                            Website: www.orientmarinelines.com<br />
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Mr. Prabodh Kulkarni</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            M/s. Schenker India Pvt. Ltd.<br />
+                            101, Touch Down, 1st Floor, No 1 & 2 HAL<br />
+                            Industrial Area,<br />
+                            Adjacent to HAL Museum Airport Road<br />
+                            Bangalore - 560037<br />
+                            Phone: + 91-080-40376700<br />
+                            Mobile: +91 9319283395<br />
+                            E-mail: prabodh.kulkarni@dbschenker.com<br />
+                            Website: www.dbschenker.com/in-en<br /><br />
+
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Mr. Prabodh Kulkarni</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            M/s. Schenker India Pvt. Ltd.<br />
+                            101, Touch Down, 1st Floor, No 1 & 2 HAL<br />
+                            Industrial Area,<br />
+                            Adjacent to HAL Museum Airport Road<br />
+                            Bangalore - 560037<br />
+                            Phone: + 91-080-40376700<br />
+                            Mobile: +91 9319283395<br />
+                            E-mail: prabodh.kulkarni@dbschenker.com<br />
+                            Website: www.dbschenker.com/in-en
+
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Mr. Shrenik Jain</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            Regional Head South<br />
+                            M/s. P.S. Bedi & Company Pvt. Ltd.<br />
+                            No2 M - 203, I Floor, 2nd Main Road,<br />
+                            Kasturi Nagar, East of NGEF, Above Airtel Outlet,<br />
+                            Bengaluru - 560043<br />
+                            Mobile : +91-9538205424<br />
+                            Email id: sjain@psbedi.com<br />
+                            Website: www.psbedi.com<br /><br />
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Sea Freight</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <!-- <th style="width: 10px"></th> -->
+                                        <th>Description</th>
+                                        <th>Rates</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of seaFreightHandlingForm">
+                                        <td>{{seaFreightHandlingModel['_'+item.code].slNo}}</td>
+                                        <!-- <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    [(ngModel)]="seaFreightHandlingModel['_'+item.code].checked" name="item.code"
+                                                    (click)="onClickCheckbox()">
+                                            </div>
+                                        </td> -->
+                                        <td>{{seaFreightHandlingModel['_'+item.code].description}}</td>
+                                        <td>{{seaFreightHandlingModel['_'+item.code].rate}}</td>
+                                        <td>
+                                            <span class="badge"
+                                                [ngClass]="{'bg-success': seaFreightHandlingModel['_'+item.code].checked == true , 'bg-danger': seaFreightHandlingModel['_'+item.code].checked == false}">
+                                                {{(seaFreightHandlingModel['_'+item.code].checked == true)? 'Yes':'No'}}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        <!-- <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" (click)="onSubmit('seaFreightHandlingForm')">Submit</button>
+                        </div> -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Air Freight</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <!-- <th style="width: 10px"></th> -->
+                                        <th>Description</th>
+                                        <th>Rates</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of airFreightHandlingForm">
+                                        <td>{{airFreightHandlingModel['_'+item.code].slNo}}</td>
+                                        <!--  <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    [(ngModel)]="airFreightHandlingModel['_'+item.code].checked" name="item.code"
+                                                    (click)="onClickCheckbox()">
+                                            </div>
+                                        </td> -->
+                                        <td>{{airFreightHandlingModel['_'+item.code].description}}</td>
+                                        <td>{{airFreightHandlingModel['_'+item.code].rate}}</td>
+                                        <td>
+                                            <span class="badge"
+                                                [ngClass]="{'bg-success': airFreightHandlingModel['_'+item.code].checked == true , 'bg-danger': airFreightHandlingModel['_'+item.code].checked == false}">
+                                                {{(airFreightHandlingModel['_'+item.code].checked == true)? 'Yes':'No'}}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        <!-- <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" (click)="onSubmit('airFreightHandlingForm')">Submit</button>
+                        </div> -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">On Site Handling Tarrif for more than 2000Kg</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <!-- <th style="width: 10px"></th> -->
+                                        <th>Description</th>
+                                        <th>Rates</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of onsiteHandling2000kgForm">
+                                        <td>{{onsiteHandling2000kgModel['_'+item.code].slNo}}</td>
+                                        <!-- <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    [(ngModel)]="onsiteHandling2000kgModel['_'+item.code].checked" name="item.code"
+                                                    (click)="onClickCheckbox()">
+                                            </div>
+                                        </td> -->
+                                        <td>{{onsiteHandling2000kgModel['_'+item.code].description}}</td>
+                                        <td>{{onsiteHandling2000kgModel['_'+item.code].rate}}</td>
+                                        <td>
+                                            <span class="badge"
+                                                [ngClass]="{'bg-success': onsiteHandling2000kgModel['_'+item.code].checked == true , 'bg-danger': onsiteHandling2000kgModel['_'+item.code].checked == false}">
+                                                {{(onsiteHandling2000kgModel['_'+item.code].checked == true)?
+                                                'Yes':'No'}}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        <!-- <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" (click)="onSubmit('onsiteHandling2000kgForm')">Submit</button>
+                        </div> -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">On Site Handling Tarrif for more than 3000Kg</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <!-- <th style="width: 10px"></th> -->
+                                        <th>Description</th>
+                                        <th>Rates</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of onsiteHandling3000kgForm">
+                                        <td>{{onsiteHandling3000kgModel['_'+item.code].slNo}}</td>
+                                        <!-- <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    [(ngModel)]="onsiteHandling3000kgModel['_'+item.code].checked" name="item.code"
+                                                    (click)="onClickCheckbox()">
+                                            </div>
+                                        </td> -->
+                                        <td>{{onsiteHandling3000kgModel['_'+item.code].description}}</td>
+                                        <td>{{onsiteHandling3000kgModel['_'+item.code].rate}}</td>
+                                        <td>
+                                            <span class="badge"
+                                                [ngClass]="{'bg-success': onsiteHandling3000kgModel['_'+item.code].checked == true , 'bg-danger': onsiteHandling3000kgModel['_'+item.code].checked == false}">
+                                                {{(onsiteHandling3000kgModel['_'+item.code].checked == true)?
+                                                'Yes':'No'}}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        <!-- <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" (click)="onSubmit('onsiteHandling3000kgForm')">Submit</button>
+                        </div> -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Hire of equipments</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <!-- <th style="width: 10px"></th> -->
+                                        <th>Description</th>
+                                        <th>Capacity</th>
+                                        <th>Rates</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of hireEquipmentsForm">
+                                        <td>{{hireEquipmentsModel['_'+item.code].slNo}}</td>
+                                        <!-- <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    [(ngModel)]="hireEquipmentsModel['_'+item.code].checked" name="item.code"
+                                                    (click)="onClickCheckbox()">
+                                            </div>
+                                        </td> -->
+                                        <td>{{hireEquipmentsModel['_'+item.code].description}}</td>
+                                        <td>{{hireEquipmentsModel['_'+item.code].capacity}}</td>
+                                        <td>{{hireEquipmentsModel['_'+item.code].rate}}</td>
+                                        <td>
+                                            <span class="badge"
+                                                [ngClass]="{'bg-success': hireEquipmentsModel['_'+item.code].checked == true , 'bg-danger': hireEquipmentsModel['_'+item.code].checked == false}">
+                                                {{(hireEquipmentsModel['_'+item.code].checked == true)? 'Yes':'No'}}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        <!-- <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" (click)="onSubmit('hireEquipmentsForm')">Submit</button>
+                        </div> -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Heavy Lift Surcharges</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <!-- <th style="width: 10px"></th> -->
+                                        <th>Description</th>
+                                        <th>Rates</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of heavyLiftSurchargesForm">
+                                        <td>{{heavyLiftSurchargesModel['_'+item.code].slNo}}</td>
+                                        <!-- <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    [(ngModel)]="heavyLiftSurchargesModel['_'+item.code].checked" name="item.code"
+                                                    (click)="onClickCheckbox()">
+                                            </div>
+                                        </td> -->
+                                        <td>{{heavyLiftSurchargesModel['_'+item.code].description}}</td>
+                                        <td>{{heavyLiftSurchargesModel['_'+item.code].rate}}</td>
+                                        <td>
+                                            <span class="badge"
+                                                [ngClass]="{'bg-success': heavyLiftSurchargesModel['_'+item.code].checked == true , 'bg-danger': heavyLiftSurchargesModel['_'+item.code].checked == false}">
+                                                {{(heavyLiftSurchargesModel['_'+item.code].checked == true)?
+                                                'Yes':'No'}}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        <!-- <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" (click)="onSubmit('heavyLiftSurchargesForm')">Submit</button>
+                        </div> -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

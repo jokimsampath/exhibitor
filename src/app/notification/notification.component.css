@@ -1,0 +1,7 @@
+.alert {
+    width: 60%;
+    margin: 0 20%;
+    top: 70px;
+    position: fixed;
+    text-align: center;
+}

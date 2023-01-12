@@ -1,0 +1,446 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Feedback</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Feedback</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section><!--  -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">EXHIBITOR'S / TRADE VISITOR'S / DELEGATE'S OPINION</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <form id="feedbackForm" class="feedbackForm" #feedbackForm="ngForm" novalidate>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4>About your activities:</h4>
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Quarry
+                                                                Owners</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Marble</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Granite</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Other
+                                                                Stones</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Processing Unit</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">100%
+                                                                EOUs</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Monuments / Slabs /
+                                                                Tiles</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Construction</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Machinery</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Quarry
+                                                                Equipments</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Organization</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Tools</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Publications</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Craft
+                                                                work / Engineer / Architect</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Artisans</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Others</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4>How you came to know about STONA</h4>
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">News
+                                                                Paper</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Embassy</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Media</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Stone
+                                                                Magazines</label></div>
+                                                    </div>
+                                                    <div class="col-3">
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Through
+                                                                FIGSI Members</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4>Will you visit / Participate in STONA Fair in 2025</h4>
+                                        <div class="form-group">                                                
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" type="radio" id="participateInStonaFair20251"
+                                                name="participateInStonaFair2025" value="Yes"  [(ngModel)]="feedbackModel.participateInStonaFair2025">
+                                                <label for="participateInStonaFair20251" class="custom-control-label">Yes</label>
+                                            </div>
+                                            <div class="custom-control custom-radio">
+                                                <input class="custom-control-input" type="radio" id="participateInStonaFair20252"
+                                                name="participateInStonaFair2025" value="No"  [(ngModel)]="feedbackModel.participateInStonaFair2025">
+                                                <label for="participateInStonaFair20252" class="custom-control-label">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4>Your Opinion on Facilities</h4>
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <div class="row">
+                                                    <div class="col-3">
+                                                        <h5>1) Restaurants</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>2) Information Centre</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>3) Stall Arrangements</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>4) Lights</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>5) Water</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>6) Truck Movement</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>7) Material Handling</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>8) Registration Counter</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>9) Exit Pass</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>10) Hall Arrangement</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>11) Toilet Facilities</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+                                                    <br />
+                                                    <div class="col-3">
+                                                        <h5>12) Cleaning</h5>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label class="form-check-label">Very
+                                                                Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Good</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Fair</label></div>
+                                                        <div class="form-check"><input class="form-check-input"
+                                                                type="checkbox"><label
+                                                                class="form-check-label">Bad</label></div><br />
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h5>Are you satisfied
+                                            with the infrastructure
+                                            as mentioned in
+                                            the brochure.
+                                            (If not please
+                                            inform the reason)</h5>
+                                            <div class="form-group">                                                
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" type="radio" id="satisfiedWithInfrastructure1"
+                                                    name="satisfiedWithInfrastructure" value="Very Good"  [(ngModel)]="feedbackModel.satisfiedWithInfrastructure">
+                                                    <label for="satisfiedWithInfrastructure1" class="custom-control-label">Very Good</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" type="radio" id="satisfiedWithInfrastructure2"
+                                                    name="satisfiedWithInfrastructure" value="Good"  [(ngModel)]="feedbackModel.satisfiedWithInfrastructure">
+                                                    <label for="satisfiedWithInfrastructure2" class="custom-control-label">Good</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" type="radio" id="satisfiedWithInfrastructure3"
+                                                    name="satisfiedWithInfrastructure" value="Fair"  [(ngModel)]="feedbackModel.satisfiedWithInfrastructure">
+                                                    <label for="satisfiedWithInfrastructure3" class="custom-control-label">Fair</label>
+                                                </div>
+                                                <div class="custom-control custom-radio">
+                                                    <input class="custom-control-input" type="radio" id="satisfiedWithInfrastructure4"
+                                                    name="satisfiedWithInfrastructure" value="Bad"  [(ngModel)]="feedbackModel.satisfiedWithInfrastructure">
+                                                    <label for="satisfiedWithInfrastructure4" class="custom-control-label">Bad</label>
+                                                </div>
+                                            </div>
+                                            <br />
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class=" form-group">
+                                            <label>Suggestions</label>
+                                            <textarea class="form-control" [(ngModel)]="feedbackModel.feedback"
+                                                name="feedback" #feedback="ngModel"
+                                                placeholder="Plese leave your feedback here, Our Support team will contact you."
+                                                rows="5" cols="50" minlength="15" required>
+</textarea>
+                                            <span class="text-danger"
+                                                *ngIf="(feedback.touched || feedbackForm.submitted) && (feedback.errors?.required || feedback.errors?.minlength)">
+                                                * minimum 20 char required
+                                            </span>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            (click)="onSubmit()">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

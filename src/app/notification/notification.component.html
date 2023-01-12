@@ -1,0 +1,8 @@
+<div [hidden]="!notificationFlag"
+    [ngClass]="{'alert-success':notificationObj.type == 'success', 'alert-danger':notificationObj.type == 'danger', 'alert-warning':notificationObj.type == 'warning'}"
+    #alert id="alert" class="alert alert-dismissible fade show" role="alert">
+    {{notificationObj.message}}
+    <button type="button" class="close" aria-label="Close" (click)="closeNotification()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>

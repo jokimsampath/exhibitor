@@ -1,0 +1,227 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Power Requirement</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Power Requirement</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section><!--  -->
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">STONA - Bank Details for RTGS / NEFT </h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  Name: FIGSI A/C STONA<br />
+                  Bank: State Bank of India<br />
+                  A/C. No.: 38092307488<br />
+                  A/C Type: Savings Bank<br />
+                  Branch: PBB, Palace Orchards Branch, Sadashivanagar Bangalore<br />
+                  IFSC: SBIN0004253
+                </div>
+                <div class="col-md-6">
+                  <img src="./assets/dist/img/figsi@sbi3.png" alt="figsi@sbi QR code"
+                    class="brand-image brand-image-dashboard" width="250">
+                </div>
+              </div>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- left column -->
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">ELECTRICITY CHARGES</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form id="powerRequirementTemporaryForm" class="powerRequirementTemporaryForm"
+              #powerRequirementTemporaryForm="ngForm"
+              (ngSubmit)="powerRequirementTemporaryForm.form.valid && onSubmitPowerRequirementTemporary()" novalidate>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <h6>Temporary Power Connection Requirement: (Applicable from <b>12 FEB 2023 to 14 FEB 2023</b>b on
+                      per day basis)</h6>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px">#</th>
+                          <th class="text-center">Charges Per KW per day<br />A</th>
+                          <th class="text-center">Qty (kw)<br />B</th>
+                          <th class="text-center">Number of days<br /></th>
+                          <th class="text-center">Amount in (Rs./ US $)<br />AxBxC</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of PowerRequirementTemporaryArr; let i = index; trackBy:indexTracker">
+                          <td>{{PowerRequirementTemporaryArr[i]['slNo']}}</td>
+                          <td>{{PowerRequirementTemporaryArr[i]['display']}}</td>
+                          <td>
+                            <div class=" form-group">
+                              <input type="number" min="1" class="form-control"
+                                [(ngModel)]="PowerRequirementTemporaryArr[i]['quantity']" name="'quantity-'{{i}}"
+                                #quantity="ngModel"
+                                (ngModelChange)="modelChanged($event, 'powerRequirementTemporaryForm', i)" required>
+                              <span class="text-danger"
+                                *ngIf="(quantity.touched || powerRequirementTemporaryForm.submitted) && (quantity.errors?.min || quantity.errors?.required)">
+                                * required field
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class=" form-group">
+                              <input type="number" min="1" max="3" class="form-control"
+                                [(ngModel)]="PowerRequirementTemporaryArr[i]['numberOfDays']" name="numberOfDays_i"
+                                #numberOfDays="ngModel"
+                                (ngModelChange)="modelChanged($event, 'powerRequirementTemporaryForm', i)" required>
+                              <span class="text-danger"
+                                *ngIf="(numberOfDays.touched || powerRequirementTemporaryForm.submitted) && ((numberOfDays.errors?.min || numberOfDays.errors?.max) || numberOfDays.errors?.required)">
+                                * required field
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class=" form-group">
+                              <input type="text" class="form-control"
+                                [(ngModel)]="PowerRequirementTemporaryArr[i]['rate']" name="rate" #rate="ngModel"
+                                disabled>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">ELECTRICITY CHARGES</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form id="PowerRequirementExhibitionForm" class="PowerRequirementExhibitionForm"
+              #PowerRequirementExhibitionForm="ngForm"
+              (ngSubmit)="PowerRequirementExhibitionForm.form.valid && onSubmitPowerRequirementExhibition()" novalidate>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12">
+                    <h6>Power Requirement during the Exhibition Period: (Applicable from <b>15 FEB 2023 to 18 FEB
+                        2023</b>)</h6>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px">#</th>
+                          <th class="text-center">Type of Space<br /></th>
+                          <th class="text-center">Charges Per KW for 4 days<br />A</th>
+                          <th class="text-center">Phase Type<br />(Single/ Three)</th>
+                          <th class="text-center" style="width: 100px;">Qty (kw)<br />B</th>
+                          <th class="text-center">Amount in (Rs./ US $)<br />AxB</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let item of PowerRequirementExhibitionArr; let i = index; trackBy:indexTracker">
+                          <td>{{PowerRequirementExhibitionArr[i]['slNo']}}</td>
+                          <td>
+                            <div class="form-group">
+                              <select class="form-control" [(ngModel)]="PowerRequirementExhibitionArr[i]['typeOfSpace']"
+                                name="'typeOfSpace-'{{i}}"
+                                (ngModelChange)="modelChanged($event, 'PowerRequirementExhibitionForm', i)"
+                                #typeOfSpace="ngModel" required>
+                                <option value='' [selected]="true">--Select Any--</option>
+                                <option value='rawSpace'>Raw Space</option>
+                                <option value='shellSpace'>Addl. Electricity for Shell Space</option>
+                              </select>
+                              <span class="text-danger"
+                                *ngIf="(typeOfSpace.touched || PowerRequirementExhibitionForm.submitted) && typeOfSpace.errors?.required">
+                                * required field
+                              </span>
+                            </div>
+                          </td>
+                          <td>{{PowerRequirementExhibitionArr[i]['display']}}</td>
+                          <td>
+                            <div class="form-group">
+                              <select class="form-control" [(ngModel)]="PowerRequirementExhibitionArr[i]['phaseType']"
+                                name="'phaseType-'{{i}}"
+                                (ngModelChange)="modelChanged($event, 'PowerRequirementExhibitionForm', i)"
+                                #phaseType="ngModel" required>
+                                <option value='' [selected]="true">--Select Any--</option>
+                                <option value='singlePhase'>Single Phase</option>
+                                <option value='threephase'>Three phase</option>
+                              </select>
+                              <span class="text-danger"
+                                *ngIf="(phaseType.touched || PowerRequirementExhibitionForm.submitted) && phaseType.errors?.required">
+                                * required field
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class=" form-group">
+                              <input type="number" min="1" class="form-control"
+                                (ngModelChange)="modelChanged($event, 'PowerRequirementExhibitionForm', i)"
+                                [(ngModel)]="PowerRequirementExhibitionArr[i]['quantity']" name="'quantity-'{{i}}"
+                                (ngModelChange)="modelChanged($event, 'PowerRequirementExhibitionForm', i)"
+                                #quantity="ngModel" required>
+                              <span class="text-danger"
+                                *ngIf="(quantity.touched || PowerRequirementExhibitionForm.submitted) && quantity.errors?.required">
+                                * required field
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class=" form-group">
+                              <input type="text" class="form-control"
+                                [(ngModel)]="PowerRequirementExhibitionArr[i]['rate']" name="'rate-'{{i}}"
+                                (ngModelChange)="modelChanged($event, 'PowerRequirementExhibitionForm', i)"
+                                #rate="ngModel" disabled>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-12">
+                    Total: <span class="text-success">
+                      <h2>{{total}}</h2>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

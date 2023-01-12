@@ -1,0 +1,36 @@
+export class BrandingSponsorshipConstants {
+    public static brandingSponsorshipForm = [
+        {size:'2.5 ft x 10 ft 34 numbers(17 poles x 2 each)',	checked:'',		location:'From National High way to entrance Plaza',			type:'Fabric',			code:'001',		rate:'12,00,000 ', 		active: 'No'},
+        {size:'19 ft x 3 ft3 numbers',                        	checked:'',		location:'Form filling counters',								type:'Polyester',		code:'002',		rate:'1,50,000', 		active: 'No'},
+        {size:'3 mts height20numbers',							checked:'',		location:'Curved top flags – opp to entrance plaza',			type:'Polyester',		code:'003',		rate:'25,000 each ', 	active: 'No'},
+        {size:'6ft x 4 ft 4 numbers',							checked:'',		location:'Smoking zone hoarding',								type:'Polyester',		code:'004',		rate:'1,00,000 each ',	active: 'No'},
+        {size:'6.5 ft x 15 ft 5 Numbers',						checked:'',		location:'Entrance plaza pillar wrapping (front)',				type:'Polyester',		code:'005',		rate:'1,00,000 each', 	active: 'No'},
+        {size:'6.7 x 18 ft 5 numbers',							checked:'',		location:'Entrance plaza pillar wrapping (front)',				type:'Polyester',		code:'005(a)', 	rate:'1,00,000 each', 	active: 'No'},
+        {size:'3ft x 2 ft 10 flags in each cluster',			checked:'',		location:'Cluster flags ( 2 clusters)',							type:'Polyester',		code:'006',		rate:'1,00,000', 		active: 'No'},
+        {size:'7 numbers',										checked:'',		location:'Registration counter ( main) Eco',					type:'solvent vinyl',	code:'007',		rate:'4,00,000', 		active: 'No'},
+        {size:'19 ft x 3 ft 10 numbers',						checked:'',		location:'Canopy Facia @ metal detector',						type:'Polyester',		code:'008',		rate:'4,00,000', 		active: 'No'},
+        {size:'2ft x 8 ft 20 Numbers 10 x 2',					checked:'',		location:'Lamp post banners',									type:'Polyester',		code:'009',		rate:'8,00,000', 		active: 'No'},
+        {size:'3 mts height 20 Numbers',						checked:'',		location:'Curved flags after metal detector',					type:'Polyester',		code:'010',		rate:'5,00,000', 		active: 'No'},
+        {size:'4 mts height 20 numbers',						checked:'',		location:'Advertisement flags',									type:'Polyester',		code:'011',		rate:'7,00,000', 		active: 'No'},
+        {size:'3 mts height 10 numbers',						checked:'',		location:'Curved flags after boom barrier',						type:'Polyester',		code:'012',		rate:'2,50,000', 		active: 'No'},
+        {size:'10\' x 10\' 2 numbers',							checked:'',		location:'Hoarding opposite Hall 1',							type:'Polyester',		code:'014',		rate:'2,00,000', 		active: 'No'},
+        {size:'',												checked:'',		location:'U shaped Grill Opposite to Hall ',					type:'Polyester',		code:'013',		rate:'2,00,000', 		active: 'No'},
+        {size:'3 ft height 10 nos',								checked:'',		location:'Curved flags outside hall 1',							type:'Polyester',		code:'015',		rate:'2,50,000', 		active: 'No'},
+        {size:'3ft Height 10 nos',								checked:'',		location:'Curved flags – hall 1 to food court',					type:'Polyester',		code:'016',		rate:'2,50,000', 		active: 'No'},
+        {size:'15 ft x7 ft 2 numbers',							checked:'',		location:'Protocol lounge ',									type:'Flex',			code:'017',		rate:'1,25,000', 		active: 'No'},
+        {size:'40 ft x 8 ft',									checked:'',		location:'Food court banner ',									type:'Polyester',		code:'018',		rate:'5,00,000', 		active: 'No'},
+        {size:'3ft x 2 ft 10 flags x 2',						checked:'',		location:'Cluster flags in front of food court',				type:'Polyester',		code:'019',		rate:'1,00,000', 		active: 'No'},
+        {size:'3 mts height 20 numbers',						checked:'',		location:'Curved top flags from food court to hall 2',			type:'Polyester',		code:'020',		rate:'5,00,000', 		active: 'No'},
+        {size:'10ft x 20 ft',									checked:'',		location:'Hoarding beside hall 2',								type:'Flex',			code:'021',		rate:'6,00,000', 		active: 'No'},
+        {size:'45 ft x 10ft',									checked:'',		location:'Hoarding by side of hall 2',							type:'Polyester',		code:'022',		rate:'8,00,000', 		active: 'No'},
+        {size:'15x10',											checked:'',		location:'Hoarding in front of hall 2',							type:'Flex',			code:'023',		rate:'4,00,000', 		active: 'No'},
+        {size:'10x8 2 numbers',									checked:'',		location:'Self standing back drop in conference area',			type:'Flex',			code:'024',		rate:'50,000 each', 	active: 'No'},
+        {size:'3mt height 20 nos',								checked:'',		location:'Curved flags connecting hall2 & 3',					type:'Polyester',		code:'025',		rate:'5,00,000', 		active: 'No'},
+        {size:'3 mts 40 nos',									checked:'',		location:'Curved flags on pathway towards Technology enter',	type:'Polyester',		code:'026',		rate:'10,00,000', 		active: 'No'},
+        {size:'15 x10',											checked:'',		location:'Hoarding outside hall 3',								type:'Flex',			code:'027',		rate:'5,00,000', 		active: 'No'},
+        {size:'10x10',											checked:'',		location:'Hoarding inside the Arch in hall 3',					type:'Flex',			code:'028',		rate:'2,00,000 each', 	active: 'No'},
+        {size:'3 mts 20 nos',									checked:'',		location:'Curved flags in front of hall 4',						type:'Polyester',		code:'029',		rate:'5,00,000', 		active: 'No'},
+        {size:'4 mts 20 nos',									checked:'',		location:'Advertising flags neat hall 4',						type:'Polyester',		code:'030',		rate:'7,00,000', 		active: 'No'}
+    ];
+
+}

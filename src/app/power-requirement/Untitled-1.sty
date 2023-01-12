@@ -1,0 +1,165 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Power Requirement</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active">Power Requirement</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section><!--  -->
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">ELECTRICITY CHARGES</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <div class="card-body">
+              <form id="powerRequirementForm" class="powerRequirementForm" #powerRequirementForm="ngForm"
+                (ngSubmit)="powerRequirementForm.form.valid && onSubmit()" novalidate>
+                <div class="row">
+                  <div class="col-12">
+                    <h6>Temporary Power Connection Requirement: (Applicable from <b>12 FEB 2023 to 14 FEB 2023</b>b on
+                      per day basis)</h6>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px">#</th>
+                          <th class="text-center">Charges Per KW per day<br />A</th>
+                          <th class="text-center">Qty (kw)<br />B</th>
+                          <th class="text-center">Number of days<br /></th>
+                          <th class="text-center">Amount in (Rs./ US $)<br />AxBxC</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          *ngFor="let item of PowerRequirementTemporaryRequestModel; let i = index; trackBy:indexTracker">
+                          <td>{{PowerRequirementTemporaryRequestModel[i]['slNo']}}</td>
+                          <td>{{PowerRequirementTemporaryRequestModel[i]['display']}}</td>
+                          <td>
+                            <div class=" form-group">
+                              <input type="number" min="0" class="form-control"
+                                [(ngModel)]="PowerRequirementTemporaryRequestModel[i]['quantity']" name="quantity_i"
+                                #quantity="ngModel"
+                                (ngModelChange)="modelChanged($event, 'powerRequirementForm', item['quantity'], 'quantity_'+i, i)" required>
+                              <span class="text-danger"
+                                *ngIf="(quantity.touched || powerRequirementForm.submitted) && quantity.errors?.required">
+                                * required field
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class=" form-group">
+                              <input type="number" min="0" class="form-control"
+                                [(ngModel)]="PowerRequirementTemporaryRequestModel[i]['numberOfDays']" name="numberOfDays_i"
+                                #numberOfDays="ngModel"
+                                (ngModelChange)="modelChanged($event, 'powerRequirementForm', item['numberOfDays'],'numberOfDays_'+i, i)" required>
+                              <span class="text-danger"
+                                *ngIf="(numberOfDays.touched || powerRequirementForm.submitted) && numberOfDays.errors?.required">
+                                * required field
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class=" form-group">
+                              <input type="text" class="form-control"
+                                [(ngModel)]="PowerRequirementTemporaryRequestModel[i]['rate']" name="rate" #rate="ngModel"
+                                disabled>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div><br /><br />
+                <div class="row">
+                  <div class="col-12">
+                    <h6>Power Requirement during the Exhibition Period: (Applicable from <b>15 FEB 2023 to 18 FEB
+                        2023</b>)</h6>
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th style="width: 10px">#</th>
+                          <th class="text-center">Type of Space<br /></th>
+                          <th class="text-center">Charges Per KW for 4 days<br />A</th>
+                          <th class="text-center">Phase Type<br />(Single/ Three)</th>
+                          <th class="text-center">Qty (kw)<br />B</th>
+                          <th class="text-center">Amount in (Rs./ US $)<br />AxB</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          *ngFor="let item of PowerRequirementExhibitionRequestModel; let i = index; trackBy:indexTracker">
+                          <td>{{PowerRequirementExhibitionRequestModel[i]['slNo']}}</td>
+                          <td>{{PowerRequirementExhibitionRequestModel[i]['typeOfSpace']}}</td>
+                          <td>{{PowerRequirementExhibitionRequestModel[i]['display']}}</td>
+                          <td>
+                            <div class="form-group">
+                              <select class="form-control"
+                                [(ngModel)]="PowerRequirementExhibitionRequestModel[i]['phaseType']"
+                                name="phaseType_i" #phaseType="ngModel" required>
+                                <option>Single Phase</option>
+                                <option>Three phase</option>
+                              </select>
+                              <span class="text-danger"
+                                *ngIf="(phaseType.touched || powerRequirementForm.submitted) && phaseType.errors?.required">
+                                * required field
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class=" form-group">
+                              <input type="number" min="0" class="form-control"
+                                (ngModelChange)="modelChanged($event, item['quantity'], 'quantity_'+i, i)"
+                                [(ngModel)]="PowerRequirementExhibitionRequestModel[i]['quantity']"
+                                name="quantity_i" #quantity="ngModel" required>
+                              <span class="text-danger"
+                                *ngIf="(quantity.touched || powerRequirementForm.submitted) && quantity.errors?.required">
+                                * required field
+                              </span>
+                            </div>
+                          </td>
+                          <td>
+                            <div class=" form-group">
+                              <input type="text" class="form-control"
+                                [(ngModel)]="PowerRequirementExhibitionRequestModel[i]['rate']" name="rate_i"
+                                #rate="ngModel" disabled>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-12">
+                    Total: <span class="text-success">
+                      <h2>{{total}}</h2>
+                    </span>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+              </form>
+            </div>
+            <!-- /.card-body -->
+            <!-- <div class="card-footer">
+              
+          </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

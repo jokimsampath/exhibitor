@@ -1,0 +1,90 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Exhibitor Badge</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Exhibitor Badge</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section><!--  -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Exhibitor Badge</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <form id="exhibitorBadgeForm" class="exhibitorBadgeForm" #exhibitorBadgeForm="ngForm">
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10px">#</th>
+                                            <th>Name of the Stand Person</th>
+                                            <th>Job Title</th>
+                                            <th>Company's Name</th>
+                                            <th>Country</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of exhibitorBadgeModelArr; let i = index">
+                                            <td>{{item.slNo}}</td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="text" class="form-control"
+                                                        [(ngModel)]="exhibitorBadgeModelArr[i].standPersonName" name="standPersonName-{{i}}"
+                                                        #standPersonName="ngModel" [disabled]="exhibitorBadgeModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="text" class="form-control"
+                                                        [(ngModel)]="exhibitorBadgeModelArr[i].jobTitle" name="jobTitle-{{i}}"
+                                                        #jobTitle="ngModel" [disabled]="exhibitorBadgeModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="text" class="form-control"
+                                                        [(ngModel)]="exhibitorBadgeModelArr[i].companyName" name="companyName-{{i}}"
+                                                        #companyName="ngModel" [disabled]="exhibitorBadgeModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class=" form-group">
+                                                    <input type="text" class="form-control"
+                                                        [(ngModel)]="exhibitorBadgeModelArr[i].country" name="country-{{i}}"
+                                                        #country="ngModel" [disabled]="exhibitorBadgeModelArr[i].status == '1'">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+                            </div>
+                        </form>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

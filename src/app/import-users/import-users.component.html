@@ -1,0 +1,36 @@
+<div class="hold-transition login-page">
+    <div class="login-box">
+        <div class="card">
+            <div class="card-body login-card-body">
+                <div class="login-logo">
+                    <a href="./" class="brand-link">
+                        <img src="./assets/dist/img/logo-stonemart.png" alt="logo-stonemart" class="brand-image">
+                    </a>
+                </div>
+                <form id="importUsersForm" class="importUsersForm" #importUsersForm="ngForm" novalidate>
+                    <div class="form-group">
+                        <label>Import Users</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="importUsers" (change)="onChange($event)"
+                                name="importUsers" required>
+                            <label class="custom-file-label" for="importUsers">{{importUsersFileName}}</label>
+                            <!-- <span class="text-danger"
+                                *ngIf="(importUsersForm.submitted) && importUsers.errors?.required">
+                                Please select a valid Excel file
+                            </span> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 signIn">
+                            <button type="button" class="btn btn-primary btn-block" id="importUsers"
+                                (click)="onUpload()">Import</button>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                </form>
+            </div>
+            <!-- /.login-card-body -->
+        </div>
+    </div>
+    <!-- /.login-box -->
+</div>

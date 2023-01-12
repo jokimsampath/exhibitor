@@ -1,0 +1,22 @@
+<div class="input-group-prepend">
+    <span class="input-group-text addUser" (click)="addUser()">+ User</span>
+</div>
+
+<div *ngFor="let i of user1; let index = index">
+    <div class="input-group mb-3">
+
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">User Id</span>
+        </div>
+        <input type="text" class="form-control" name="userid-{{index}}" (ngModelChange)="modelChanged($event, index)"
+            [(ngModel)]="user1[index]['userId']"> {{index}}
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Reason</span>
+        </div>
+        <input type="text" class="form-control" name="reason-{{index}}" [(ngModel)]="user1[index]['reason']">
+
+        <!-- <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1" (click)="removeUserId(index)"><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </div> -->
+    </div>
+</div>

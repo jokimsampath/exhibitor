@@ -1,0 +1,622 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+     <div class="container-fluid">
+      <div class="row mb-2">
+       <div class="col-sm-6">
+        <h1>Feedback</h1>
+       </div>
+       <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+         <li class="breadcrumb-item">
+          <a href="#">Home</a>
+         </li>
+         <li class="breadcrumb-item active">Feedback</li>
+        </ol>
+       </div>
+      </div>
+     </div>
+     <!-- /.container-fluid -->
+    </section>
+    <!--  -->
+    <!-- Main content -->
+    <section class="content">
+     <div class="container-fluid">
+      <div class="row">
+       <div class="col-md-12">
+        <div class="card card-primary">
+         <div class="card-header">
+          <h3 class="card-title">EXHIBITOR'S / TRADE VISITOR'S / DELEGATE'S OPINION</h3>
+         </div>
+         <!-- /.card-header -->
+         <!-- <div class="card-body">
+          <form id="feedbackForm" class="feedbackForm" #feedbackForm="ngForm" novalidate>
+           <div class="row">
+            <div class="col-12">
+             <h4>About your activities:</h4>
+             <div class="form-group">
+              <div class="form-check">
+               <div class="row">
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities1" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities1">Quarry Owners</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities2" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities2">Marble</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities3" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities3">Granite</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities4" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities4">Other Stones</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities5" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities5">Processing Unit</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities6" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities6">100% EOUs</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities7" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities7">Monuments / Slabs / Tiles</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities8" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities8">Construction</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities9" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities9">Machinery</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities10" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities10">Quarry Equipments</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities11" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities11">Organization</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities12" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities12">Tools</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities13" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities1">Publications</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities13" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities1">Craft work / Engineer / Architect</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities14" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities14">Artisans</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="aboutYourActivities15" name="aboutYourActivities">
+                  <label class="form-check-label" for="aboutYourActivities15">Others</label>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <br />
+           <div class="row">
+            <div class="col-12">
+             <h4>How you came to know about STONA</h4>
+             <div class="form-group">
+              <div class="form-check">
+               <div class="row">
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="howYouKnowStona" name="howYouKnowStona">
+                  <label class="form-check-label" for="howYouKnowStona">News Paper</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="howYouKnowStona" name="howYouKnowStona">
+                  <label class="form-check-label" for="howYouKnowStona">Embassy</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="howYouKnowStona" name="howYouKnowStona">
+                  <label class="form-check-label" for="howYouKnowStona">Media</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="howYouKnowStona" name="howYouKnowStona">
+                  <label class="form-check-label" for="howYouKnowStona">Stone Magazines</label>
+                 </div>
+                </div>
+                <div class="col-3">
+                 <div class="form-check">
+                  <input class="form-check-input" type="checkbox" (onChange)="onChange($event)" [(ngModel)]="feedbackModel.feedback" id="howYouKnowStona" name="howYouKnowStona">
+                  <label class="form-check-label" for="howYouKnowStona">Through FIGSI Members</label>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <br />
+           <div class="row">
+            <div class="col-12">
+             <h4>Will you visit / Participate in STONA Fair in 2025</h4>
+             <div class="form-group">
+              <div class="custom-control custom-radio">
+               <input class="custom-control-input" type="radio" (onChange)="onChange($event)" id="participateIn20251" name="participateIn2025" value="Yes" [(ngModel)]="feedbackModel.participateIn2025">
+               <label for="participateIn20251" class="custom-control-label">Yes</label>
+              </div>
+              <div class="custom-control custom-radio">
+               <input class="custom-control-input" type="radio" (onChange)="onChange($event)" id="participateIn20252" name="participateIn2025" value="No" [(ngModel)]="feedbackModel.participateIn2025">
+               <label for="participateIn20252" class="custom-control-label">No</label>
+              </div>
+             </div>
+            </div>
+           </div>
+           <br />
+           <div class="row">
+            <div class="col-12">
+                <h4>Your Opinion on Facilities</h4>
+                <div class="form-group">
+                    <div class="form-check">
+                        <div class="row">
+                            <div class="col-3">
+                                <h5>1) Restaurants</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="restaurants1" name="restaurants" value="Very Good"
+                                            [(ngModel)]="feedbackModel.restaurants">
+                                        <label for="restaurants1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="restaurants2" name="restaurants" value="Good"
+                                            [(ngModel)]="feedbackModel.restaurants">
+                                        <label for="restaurants2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="restaurants3" name="restaurants" value="Fair"
+                                            [(ngModel)]="feedbackModel.restaurants">
+                                        <label for="restaurants3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="restaurants4" name="restaurants" value="Bad"
+                                            [(ngModel)]="feedbackModel.restaurants">
+                                        <label for="restaurants4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>2) Information Centre</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="informationCentre1" name="informationCentre" value="Very Good"
+                                            [(ngModel)]="feedbackModel.informationCentre">
+                                        <label for="informationCentre1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="informationCentre2" name="informationCentre" value="Good"
+                                            [(ngModel)]="feedbackModel.informationCentre">
+                                        <label for="informationCentre2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="informationCentre3" name="informationCentre" value="Fair"
+                                            [(ngModel)]="feedbackModel.informationCentre">
+                                        <label for="informationCentre3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="informationCentre4" name="informationCentre" value="Bad"
+                                            [(ngModel)]="feedbackModel.informationCentre">
+                                        <label for="informationCentre4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>3) Stall Arrangements</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="stallArrangements1" name="stallArrangements" value="Very Good"
+                                            [(ngModel)]="feedbackModel.stallArrangements">
+                                        <label for="stallArrangements1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="stallArrangements2" name="stallArrangements" value="Good"
+                                            [(ngModel)]="feedbackModel.stallArrangements">
+                                        <label for="stallArrangements2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="stallArrangements3" name="stallArrangements" value="Fair"
+                                            [(ngModel)]="feedbackModel.stallArrangements">
+                                        <label for="stallArrangements3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="stallArrangements4" name="stallArrangements" value="Bad"
+                                            [(ngModel)]="feedbackModel.stallArrangements">
+                                        <label for="stallArrangements4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>4) Lights</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="lights1" name="lights" value="Very Good" [(ngModel)]="feedbackModel.lights">
+                                        <label for="lights1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="lights2" name="lights" value="Good" [(ngModel)]="feedbackModel.lights">
+                                        <label for="lights2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="lights3" name="lights" value="Fair" [(ngModel)]="feedbackModel.lights">
+                                        <label for="lights3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="lights4" name="lights" value="Bad" [(ngModel)]="feedbackModel.lights">
+                                        <label for="lights4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>5) Water</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="water1" name="water" value="Very Good" [(ngModel)]="feedbackModel.water">
+                                        <label for="water1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="water2" name="water" value="Good" [(ngModel)]="feedbackModel.water">
+                                        <label for="water2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="water3" name="water" value="Fair" [(ngModel)]="feedbackModel.water">
+                                        <label for="water3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="water4" name="water" value="Bad" [(ngModel)]="feedbackModel.water">
+                                        <label for="water4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>6) Truck Movement</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="trucktMovement1" name="trucktMovement" value="Very Good"
+                                            [(ngModel)]="feedbackModel.trucktMovement">
+                                        <label for="trucktMovement1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="trucktMovement2" name="trucktMovement" value="Good"
+                                            [(ngModel)]="feedbackModel.trucktMovement">
+                                        <label for="trucktMovement2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="trucktMovement3" name="trucktMovement" value="Fair"
+                                            [(ngModel)]="feedbackModel.trucktMovement">
+                                        <label for="trucktMovement3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="trucktMovement4" name="trucktMovement" value="Bad"
+                                            [(ngModel)]="feedbackModel.trucktMovement">
+                                        <label for="trucktMovement4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>7) Material Handling</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="materialHandling1" name="materialHandling" value="Very Good"
+                                            [(ngModel)]="feedbackModel.materialHandling">
+                                        <label for="materialHandling1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="materialHandling2" name="materialHandling" value="Good"
+                                            [(ngModel)]="feedbackModel.materialHandling">
+                                        <label for="materialHandling2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="materialHandling3" name="materialHandling" value="Fair"
+                                            [(ngModel)]="feedbackModel.materialHandling">
+                                        <label for="materialHandling3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="materialHandling4" name="materialHandling" value="Bad"
+                                            [(ngModel)]="feedbackModel.materialHandling">
+                                        <label for="materialHandling4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>8) Registration Counter</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="registrationCounter1" name="registrationCounter" value="Very Good"
+                                            [(ngModel)]="feedbackModel.registrationCounter">
+                                        <label for="registrationCounter1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="registrationCounter2" name="registrationCounter" value="Good"
+                                            [(ngModel)]="feedbackModel.registrationCounter">
+                                        <label for="registrationCounter2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="registrationCounter3" name="registrationCounter" value="Fair"
+                                            [(ngModel)]="feedbackModel.registrationCounter">
+                                        <label for="registrationCounter3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="registrationCounter4" name="registrationCounter" value="Bad"
+                                            [(ngModel)]="feedbackModel.registrationCounter">
+                                        <label for="registrationCounter4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>9) Exit Pass</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="exitPass1" name="exitPass" value="Very Good"
+                                            [(ngModel)]="feedbackModel.exitPass">
+                                        <label for="exitPass1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="exitPass2" name="exitPass" value="Good" [(ngModel)]="feedbackModel.exitPass">
+                                        <label for="exitPass2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="exitPass3" name="exitPass" value="Fair" [(ngModel)]="feedbackModel.exitPass">
+                                        <label for="exitPass3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="exitPass4" name="exitPass" value="Bad" [(ngModel)]="feedbackModel.exitPass">
+                                        <label for="exitPass4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>10) Hall Arrangement </h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="hallArrangement1" name="hallArrangement" value="Very Good"
+                                            [(ngModel)]="feedbackModel.hallArrangement">
+                                        <label for="hallArrangement1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="hallArrangement2" name="hallArrangement" value="Good"
+                                            [(ngModel)]="feedbackModel.hallArrangement">
+                                        <label for="hallArrangement2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="hallArrangement3" name="hallArrangement" value="Fair"
+                                            [(ngModel)]="feedbackModel.hallArrangement">
+                                        <label for="hallArrangement3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="hallArrangement4" name="hallArrangement" value="Bad"
+                                            [(ngModel)]="feedbackModel.hallArrangement">
+                                        <label for="hallArrangement4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>11) Toilet Facilities</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="toiletFacilities1" name="toiletFacilities" value="Very Good"
+                                            [(ngModel)]="feedbackModel.toiletFacilities">
+                                        <label for="toiletFacilities1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="toiletFacilities2" name="toiletFacilities" value="Good"
+                                            [(ngModel)]="feedbackModel.toiletFacilities">
+                                        <label for="toiletFacilities2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="toiletFacilities3" name="toiletFacilities" value="Fair"
+                                            [(ngModel)]="feedbackModel.toiletFacilities">
+                                        <label for="toiletFacilities3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="toiletFacilities4" name="toiletFacilities" value="Bad"
+                                            [(ngModel)]="feedbackModel.toiletFacilities">
+                                        <label for="toiletFacilities4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-3">
+                                <h5>12) Cleaning </h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="cleaning1" name="cleaning" value="Very Good"
+                                            [(ngModel)]="feedbackModel.cleaning">
+                                        <label for="cleaning1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="cleaning2" name="cleaning" value="Good" [(ngModel)]="feedbackModel.cleaning">
+                                        <label for="cleaning2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="cleaning3" name="cleaning" value="Fair" [(ngModel)]="feedbackModel.cleaning">
+                                        <label for="cleaning3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="cleaning4" name="cleaning" value="Bad" [(ngModel)]="feedbackModel.cleaning">
+                                        <label for="cleaning4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+        
+                        <br />
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Are you satisfied with the infrastructure as mentioned in the brochure. (If not please
+                                    inform the reason)</h5>
+                                <div class="form-group">
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="satisfiedWithInfrastructure1" name="satisfiedWithInfrastructure"
+                                            value="Very Good" [(ngModel)]="feedbackModel.satisfiedWithInfrastructure">
+                                        <label for="satisfiedWithInfrastructure1" class="custom-control-label">Very Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="satisfiedWithInfrastructure2" name="satisfiedWithInfrastructure" value="Good"
+                                            [(ngModel)]="feedbackModel.satisfiedWithInfrastructure">
+                                        <label for="satisfiedWithInfrastructure2" class="custom-control-label">Good</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="satisfiedWithInfrastructure3" name="satisfiedWithInfrastructure" value="Fair"
+                                            [(ngModel)]="feedbackModel.satisfiedWithInfrastructure">
+                                        <label for="satisfiedWithInfrastructure3" class="custom-control-label">Fair</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input class="custom-control-input" type="radio" (onChange)="onChange($event)"
+                                            id="satisfiedWithInfrastructure4" name="satisfiedWithInfrastructure" value="Bad"
+                                            [(ngModel)]="feedbackModel.satisfiedWithInfrastructure">
+                                        <label for="satisfiedWithInfrastructure4" class="custom-control-label">Bad</label>
+                                    </div>
+                                </div>
+                                <br />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-6">
+                                <div class=" form-group">
+                                    <label>Suggestions</label>
+                                    <textarea class="form-control" [(ngModel)]="feedbackModel.feedback" name="feedback"
+                                        #feedback="ngModel"
+                                        placeholder="Plese leave your feedback here, Our Support team will contact you."
+                                        rows="5" cols="50" minlength="15" required></textarea>
+                                    <span class="text-danger"
+                                        *ngIf="(feedback.touched || feedbackForm.submitted) && (feedback.errors?.required || feedback.errors?.minlength)">
+                                        * minimum 20 char required </span>
+                                </div>
+                                <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                      
+          </form>
+         </div> -->
+         <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+       </div>
+       <!-- /.col -->
+      </div>
+     </div>
+     <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+   </div>

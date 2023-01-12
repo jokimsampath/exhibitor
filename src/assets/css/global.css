@@ -1,0 +1,51 @@
+@font-face {
+    font-family: mukta;
+    src: url(../fonts/Mukta/Mukta-Bold.ttf);
+}
+
+@font-face {
+    font-family: mukta;
+    src: url(../fonts/Mukta/Mukta-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: mukta;
+    src: url(../fonts/Mukta/Mukta-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: mukta-light;
+    src: url(../fonts/Mukta/Mukta-Light.ttf);
+}
+
+@font-face {
+    font-family: mukta;
+    src: url(../fonts/Mukta/Mukta-Medium.ttf);
+}
+
+@font-face {
+    font-family: mukta-regular;
+    src: url(../fonts/Mukta/Mukta-Regular.ttf);
+}
+
+@font-face {
+    font-family: mukta;
+    src: url(../fonts/Mukta/Mukta-SemiBold.ttf);
+}
+
+* {
+    font-family: mukta-light;
+  }
+body {
+    font-family: mukta-light;
+    font-weight: 400;
+}
+
+form.signInForm label.error, label.error {
+	/* remove the next line when you have trouble in IE6 with labels in list */
+	color: red;
+    font-style: italic;
+    font-size: 13px;
+    font-weight: normal;
+    padding: 5px 0 0 5px;
+}

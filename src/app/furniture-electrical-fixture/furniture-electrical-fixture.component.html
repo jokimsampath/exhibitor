@@ -1,0 +1,74 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Furniture/ Electrical</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Furniture-Electrical</li>
+                    </ol>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section><!--  -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Additional Furniture/ Electrical Fixture</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">#</th>
+                                        <th style="width: 10px"></th>
+                                        <th>Description</th>
+                                        <th>Unit Cost in INR</th>
+                                        <th>Active</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of FurnitureElectricalFixtureModelArr">
+                                        <td>{{FurnitureElectricalFixtureModel[item].slNo}}</td>
+                                        <td>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox"
+                                                    [(ngModel)]="FurnitureElectricalFixtureModel[item].checked"
+                                                    name="item" >
+                                            </div>
+                                        </td>
+                                        <td>{{FurnitureElectricalFixtureModel[item].description}}</td>
+                                        <td>{{FurnitureElectricalFixtureModel[item].rateInr}}</td>
+                                        <td>
+                                            <span class="badge"
+                                                [ngClass]="{'bg-success': FurnitureElectricalFixtureModel[item].checked == true , 'bg-danger': FurnitureElectricalFixtureModel[item].checked == false}">
+                                                {{(FurnitureElectricalFixtureModel[item].checked == true)? 'Yes':'No'}}
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- /.card-body -->
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+                        </div>
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
